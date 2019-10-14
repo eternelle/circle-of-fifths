@@ -1,21 +1,35 @@
 import React from 'react';
 import Table from './components/Table/Table';
-import './App.css';
+import Circle from './components/Circle/Circle';
 
 function App() {
   const tonics = {
     tableHeader: 'tonic',
-    tableContent: ['C','F','G']
+    tableContent: ['C','G','D','A','E','B','F#', 'C#', 'G#', 'D#', 'A#']
   };
+  
   const modes = {
     tableHeader: 'mode',
-    tableContent: ['Major','Minor']
+    tableContent: ['Lydian','Major / Ionian', 'Mixolydian', 'Dorian', 'N.Minor / Aeolian', 'Phrygian', 'Locrian']
   };
+
+  const circle = {
+    tonic: ['C','G','D','A','E','B','F#', 'C#', 'G#', 'D#', 'A#'],
+    step: ['IV', 'I', 'V', 'ii', 'vi', 'iii', 'vii°'],
+    description: ['major', 'minor', 'diminished']
+  };
+
+  const handleClick = (event) => {
+    console.log(event.target);
+  }
 
   return (
     <div className="App">
-      <Table data={tonics}/>
-      <Table data={modes}/>
+      <div className="tables-container">
+        <Table data={tonics} click={handleClick}/>
+        <Table data={modes} click={handleClick}/>
+      </div>
+      <Circle data={circle}/>
     </div>
   );
 }

@@ -7,11 +7,11 @@ const Table = (props) => {
         <table>
             <thead>
                 <tr>
-                    <TableHeader header={props.tableHeader}/>
+                    <TableHeader header={props.data.tableHeader}/>
                 </tr>
             </thead>
             <tbody>
-                <TableContent content={props.tableContent}/>
+                <TableContent content={props.data.tableContent} click={props.click}/>
             </tbody>
         </table>
     );
