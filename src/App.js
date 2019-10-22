@@ -2,102 +2,49 @@ import React, { useState } from 'react';
 import Circle from './components/Circle/Circle';
 import Description from './components/Description/Description';
 import { ActiveElementsContext } from './ActiveElementsContext';
+import keyData from './keyData';
 
 function App() {
   const [activeElements, setActiveElements] = useState({
-    activeKey: 'C major',
+    activeKey: 'key-c',
     activeTab: 'major'
   });
+  const [activeKeyControls, setActiveKeyControls] = useState({
+    controlLeft: 'key-f',
+    controlRight: 'key-g'
+  });
+  const [circleRotation, setCircleRotation] = useState(0);
   const { Provider } = ActiveElementsContext;
   const modeTabs = ['major', 'minor'];
-  const data = [
-    {
-      mode: 'major',
-      keyNote: 'C major',
-      relativeKey: 'A minor',
-      functionalHarmony: {
-        I: 'C',
-        ii: 'Dm',
-        iii: 'Em',
-        IV: 'F',
-        V: 'G',
-        vi: 'Am',
-        vii: 'B°'
-      },
-      harmonicTriad: {
-        tonic: 'C',
-        dominant: 'G',
-        subdominant: 'F'
-      }
-    },
-    {
-      mode: 'major',
-      keyNote: 'G major',
-      relativeKey: 'E minor',
-      functionalHarmony: {
-        I: 'G',
-        ii: 'Am',
-        iii: 'Bm',
-        IV: 'C',
-        V: 'D',
-        vi: 'Em',
-        vii: 'F#°'
-      },
-      harmonicTriad: {
-        tonic: 'G',
-        dominant: 'D',
-        subdominant: 'C'
-      }
-    },
-    {
-      mode: 'minor',
-      keyNote: 'A minor',
-      relativeKey: 'C major',
-      functionalHarmony: {
-        i: 'Am',
-        ii: 'B°',
-        bII: 'C',
-        iv: 'Dm',
-        v: 'Em',
-        bVI: 'F',
-        bVII: 'G'
-      },
-      harmonicTriad: {
-        tonic: 'Am',
-        dominant: 'E',
-        subdominant: 'Dm'
-      }
-    },
-    {
-      mode: 'minor',
-      keyNote: 'E minor',
-      relativeKey: 'G major',
-      functionalHarmony: {
-        i: 'Em',
-        ii: 'F#°',
-        bII: 'G',
-        iv: 'Am',
-        v: 'Bm',
-        bVI: 'C',
-        bVII: 'D'
-      },
-      harmonicTriad: {
-        tonic: 'Em',
-        dominant: 'B',
-        subdominant: 'Am'
-      }
-    }
-  ];
 
-  const handleClick = (event) => {
-    console.log(event.target);
+  const setActiveTab = (event) => {
+    setActiveElements({...activeElements, activeTab: event.target.dataset.tabname});
+  }
+
+  const setActiveKey = (direction) => {
+    const newActiveKey = keyData.filter(key =>
+      key.keyId === activeKeyControls[direction]
+    );
+    setActiveElements({...activeElements, activeKey: newActiveKey[0].keyId});
+    setActiveKeyControls({controlLeft: newActiveKey[0].controlLeft, controlRight: newActiveKey[0].controlRight});
+    console.log(activeElements, activeKeyControls);
+  }
+
+  const rotateCircleLeft = () => {  
+    setCircleRotation(circleRotation + 30);
+    setActiveKey('controlLeft');
+  }
+
+  const rotateCircleRight = () => {
+    setCircleRotation(circleRotation - 30);
+    setActiveKey('controlRight');
   }
 
   return (
     <div className="App">
+      <Circle rotation={circleRotation} rotateLeft={rotateCircleLeft} rotateRight={rotateCircleRight} activeKey={activeElements.activeKey}/>
       <Provider value={activeElements}>
-        <Circle click={handleClick}/>
-        <Description modeTabs={modeTabs} descriptionData={data}/>
+        <Description click={setActiveTab} modeTabs={modeTabs}/>
       </Provider>
     </div>
   );

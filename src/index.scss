@@ -51,11 +51,15 @@ body {
 
 .circle-container {
   svg {
-    g {
-      opacity: 0.75;
+    transition-duration: 0.5s;
 
-      &.active {
-        opacity: 1;
+    g {
+      &.key {
+        opacity: 0.5;
+
+        &.active {
+          opacity: 1;
+        }
       }
     }
   }
@@ -86,8 +90,19 @@ body {
   margin: 50px 0 0 100px;
 
   .tabs {
+    margin-bottom: 20px;
+
     .tab {
       display: inline-block;
+      padding: 5px 10px;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      text-transform: uppercase;
+
+      &.active {
+        border-bottom: 0;
+        border-top: 1px solid;
+      }
     }
   }
 
@@ -99,15 +114,21 @@ body {
     }
 
     &__text {
+      margin: 10px 0 20px;
+
       .harmony {
         &__item {
           display: inline-block;
+          margin: 0 8px 5px 0;
+          padding: 4px 10px;
+          background-color: lightgrey;
         }
       }
 
       .triad {
         &__item {
           display: inline-block;
+          margin-right: 25px;
         }
       }
     }

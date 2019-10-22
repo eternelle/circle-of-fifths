@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const ActiveElementsContext = React.createContext({
-    activeKey: 'C major',
+    activeKey: 'key-c',
+    controlLeft: 'key-f',
+    controlRight: 'key-g',
     activeTab: 'major'
 });
