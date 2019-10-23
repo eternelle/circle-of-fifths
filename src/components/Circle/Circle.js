@@ -18,7 +18,7 @@ const Circle = (props) => {
                     </g>
                     <g id="letters">
                         {keyData.map(key => 
-                            <g key={key.keyId} id={key.keyId} className={"key " + (key.keyId === props.activeKey ? 'active' : '')} control-left={key.controlLeft} control-right={key.controlRight}>
+                            <g key={key.keyId} id={key.keyId} className={"key" + (key.keyId === props.activeKey ? ' active' : '')} control-left={key.controlLeft} control-right={key.controlRight}>
                                 {Parser(key.svg)}
                             </g>         
                         )}
