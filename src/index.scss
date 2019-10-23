@@ -75,12 +75,14 @@ header {
   }
 
   .description {
-    padding: 20px;
-    border: 1px solid;
-    border-top: none;
-
     &.fade {
       animation: fade-in-keyframes 2s;
+    }
+
+    &__wrapper {
+      padding: 20px;
+      border: 1px solid;
+      border-top: none;
     }
 
     &__group {
