@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/circle-of-fifths/static/css/main.d71698f8.chunk.css",
+    "main.js": "/circle-of-fifths/static/js/main.9f6ba0d7.chunk.js",
+    "main.js.map": "/circle-of-fifths/static/js/main.9f6ba0d7.chunk.js.map",
+    "runtime-main.js": "/circle-of-fifths/static/js/runtime-main.03f34c9d.js",
+    "runtime-main.js.map": "/circle-of-fifths/static/js/runtime-main.03f34c9d.js.map",
+    "static/js/2.9a335785.chunk.js": "/circle-of-fifths/static/js/2.9a335785.chunk.js",
+    "static/js/2.9a335785.chunk.js.map": "/circle-of-fifths/static/js/2.9a335785.chunk.js.map",
+    "index.html": "/circle-of-fifths/index.html",
+    "precache-manifest.9efb3c331cf83d3b5a7977230cd39206.js": "/circle-of-fifths/precache-manifest.9efb3c331cf83d3b5a7977230cd39206.js",
+    "service-worker.js": "/circle-of-fifths/service-worker.js",
+    "static/css/main.d71698f8.chunk.css.map": "/circle-of-fifths/static/css/main.d71698f8.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03f34c9d.js",
+    "static/js/2.9a335785.chunk.js",
+    "static/css/main.d71698f8.chunk.css",
+    "static/js/main.9f6ba0d7.chunk.js"
+  ]
+}
