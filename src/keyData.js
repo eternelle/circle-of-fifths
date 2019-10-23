@@ -53,6 +53,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'G major',
+                relativeKey: 'E minor',
                 keyHarmony: {
                     I: 'G',
                     ii: 'Am',
@@ -71,6 +72,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'E minor',
+                relativeKey: 'G major',
                 keyHarmony: {
                     i: 'Em',
                     ii: 'F#°',
@@ -97,6 +99,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'D major',
+                relativeKey: 'B minor',
                 keyHarmony: {
                     I: 'D',
                     ii: 'Em',
@@ -115,6 +118,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'B minor',
+                relativeKey: 'D major',
                 keyHarmony: {
                     i: 'Bm',
                     ii: 'C#°',
@@ -141,6 +145,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'A major',
+                relativeKey: 'F# minor',
                 keyHarmony: {
                     I: 'D',
                     ii: 'Em',
@@ -159,6 +164,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'F# minor',
+                relativeKey: 'A major',
                 keyHarmony: {
                     i: 'Bm',
                     ii: 'C#°',
@@ -186,6 +192,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'E major',
+                relativeKey: 'C# minor',
                 keyHarmony: {
                     I: 'E',
                     ii: 'F#m',
@@ -204,6 +211,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'C# minor',
+                relativeKey: 'E major',
                 keyHarmony: {
                     i: 'C#m',
                     ii: 'D#°',
@@ -230,6 +238,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'B major',
+                relativeKey: 'G# minor',
                 keyHarmony: {
                     I: 'B',
                     ii: 'C#m',
@@ -248,6 +257,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'G# minor',
+                relativeKey: 'B major',
                 keyHarmony: {
                     i: 'G#m',
                     ii: 'A#°',
@@ -274,6 +284,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'F# major',
+                relativeKey: 'D# minor',
                 keyHarmony: {
                     I: 'F#',
                     ii: 'G#m',
@@ -292,6 +303,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'D# minor',
+                relativeKey: 'F# major',
                 keyHarmony: {
                     i: 'D#m',
                     ii: 'E#°',
@@ -318,6 +330,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'Db major',
+                relativeKey: 'Eb minor',
                 keyHarmony: {
                     I: 'Db',
                     ii: 'Ebm',
@@ -336,6 +349,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'Eb minor',
+                relativeKey: 'Db major',
                 keyHarmony: {
                     i: 'Bbm',
                     ii: 'C°',
@@ -362,6 +376,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'Ab major',
+                relativeKey: 'F minor',
                 keyHarmony: {
                     I: 'Ab',
                     ii: 'Bbm',
@@ -380,6 +395,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'F minor',
+                relativeKey: 'Ab major',
                 keyHarmony: {
                     i: 'Fm',
                     ii: 'G°',
@@ -406,6 +422,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'Eb major',
+                relativeKey: 'C minor',
                 keyHarmony: {
                     I: 'Eb',
                     ii: 'Fm',
@@ -424,6 +441,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'C minor',
+                relativeKey: 'Eb major',
                 keyHarmony: {
                     i: 'Cm',
                     ii: 'D°',
@@ -450,6 +468,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'Bb major',
+                relativeKey: 'G minor',
                 keyHarmony: {
                     I: 'Bb',
                     ii: 'Cm',
@@ -468,6 +487,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'G minor',
+                relativeKey: 'Bb major',
                 keyHarmony: {
                     i: 'Gm',
                     ii: 'A°',
@@ -494,6 +514,7 @@ const keyData = [
             {
                 type: 'major',
                 key: 'F major',
+                relativeKey: 'D minor',
                 keyHarmony: {
                     I: 'F',
                     ii: 'Gm',
@@ -512,6 +533,7 @@ const keyData = [
             {
                 type: 'minor',
                 key: 'D minor',
+                relativeKey: 'F major',
                 keyHarmony: {
                     i: 'Dm',
                     ii: 'E°',

@@ -34,7 +34,7 @@ const Description = (props) => {
                                     <div className="description__text">
                                         <div className="harmony">
                                             {Object.entries(mode.keyHarmony).map(([key, value]) =>
-                                                <div key={key} className="harmony__item">{key} {value}</div>
+                                                <div key={key} className="harmony__item"><strong>{key}</strong> {value}</div>
                                             )}
                                         </div>
                                         <div className="triad">
